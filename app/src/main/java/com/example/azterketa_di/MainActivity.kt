@@ -64,6 +64,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         ){
             Column (
                 horizontalAlignment = Alignment.Start
+
             ){
                 Text(kaixo, Modifier.background(Color.Red))
             }
@@ -86,13 +87,14 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         Row (
             modifier = Modifier
                 .background(Color.Green)
-//                .padding(paddinga)
+                .fillMaxWidth()
+            ,
+            horizontalArrangement = Arrangement.SpaceEvenly
 
         ){
             Column(
                 modifier= Modifier
 
-                    .padding(horizontal = 10.dp)
                     .background(Color.Blue)
                 ,
             ) {
@@ -102,8 +104,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             }
             Column(
                 modifier= Modifier
-                    .padding(horizontal = 10.dp)
                     .background(Color.Magenta)
+                    .padding(horizontal = paddinga)
             ) {
                 BotoiZenbakiduna("4")
                 BotoiZenbakiduna("5")
@@ -111,7 +113,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             }
             Column(
                 modifier= Modifier
-                    .padding(horizontal = 10.dp)
                     .background(Color.Black)
             ) {
                 BotoiZenbakiduna("7")
@@ -119,29 +120,36 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 BotoiZenbakiduna("9")
             }
         }
-        Row (
+//        Row (
+//            modifier = Modifier
+//                .background(Color.Yellow)
+//                .padding(paddinga)
+//                .fillMaxSize()
+//            ,
+//            horizontalArrangement = Arrangement.Center,
+//            verticalAlignment = Alignment.CenterVertically
+//        ){
+//            Column (
+//                horizontalAlignment = Alignment.CenterHorizontally,
+//                verticalArrangement = Arrangement.Center,
+//            ){
+//                Text("Resultado")
+//                Text("666")
+//            }
+//
+//        }
+        Column (
             modifier = Modifier
                 .background(Color.Yellow)
-                .padding(paddinga)
-                .fillMaxSize()
-            ,
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
+               .padding(paddinga)
+                .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
         ){
-            Column (
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center,
-            ){
-                Text("Resultado")
-                Text("666")
-            }
-
+            Text("Resultado")
+            Text("666")
         }
     }
-//    Text(
-//        text = "Hello $name!",
-//        modifier = modifier
-//    )
 }
 
 // Zenbaki bat duen, funtzionalitaterik gabeko botoia, 60 display pixeleko tamainakoa.
