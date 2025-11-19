@@ -59,22 +59,25 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         Row (
             modifier = Modifier
                 .background(Color.Gray)
-                .padding(paddinga)
+                .padding(vertical = paddinga)
                 .fillMaxWidth()
+            ,
+            horizontalArrangement = Arrangement.Absolute.SpaceBetween
         ){
             Column (
-                horizontalAlignment = Alignment.Start
+                modifier= Modifier.background(Color.Red),
+                verticalArrangement = Arrangement.Bottom
 
             ){
                 Text(kaixo, Modifier.background(Color.Red))
             }
             Column (
-
+                modifier= Modifier.background(Color.Red),
                 horizontalAlignment = Alignment.End
             ){
-                Text(kaixo, Modifier.background(Color.Red))
-                Text(kaixo, Modifier.background(Color.Red))
-                Text(kaixo, Modifier.background(Color.Red))
+                Text(kaixo)
+                Text(kaixo)
+                Text(kaixo)
             }
         }
         Row (
